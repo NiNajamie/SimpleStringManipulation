@@ -22,12 +22,12 @@ int main(int argc, const char * argv[]) {
         
         // user inputs "quit" and get out of the loop
         while (YES) {
-            NSString *input = [[InputCollector alloc] inputForPrompt:@"MAIN MENU. Type quit for exiting the program, type c to continue or new for creating new contact"];
+            NSString *input = [[InputCollector alloc] inputForPrompt:@"What would you like do next? new - Create a new contact, list - List all contacts, quit - Exit Application >"];
 
             if ([input containsString:@"quit"]) {
                 NSLog(@"User quited app");
                 break;
-            } else if ([input containsString:@"continue"]) {
+//            } else if ([input containsString:@"continue"]) {
 //                NSString *secondInput = [[InputCollector alloc] inputForPrompt:@"tell me the phrase:"];
 //                NSLog(@"Random phrase! %@", secondInput);
                 
@@ -41,8 +41,12 @@ int main(int argc, const char * argv[]) {
                 Contact *newContact = [[Contact alloc] initWithName:fullName email:email];
                 NSLog(@"%@", newContact);
                 [newContactList addContact:newContact];
+                
+                // type list for showing contactlist which user has input
             } else if ([input containsString:@"list"]) {
                 [newContactList listOfContacts];
+                
+                
                 
             }
         //}

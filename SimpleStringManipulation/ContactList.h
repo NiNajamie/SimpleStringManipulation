@@ -17,5 +17,7 @@
 // add a method called -(void)addContact:(Contact *)newContact
 - (void)addContact:(Contact *)newContact;
 
+// add a method to get listOfContacts from user input
 - (void)listOfContacts;
+
 @end

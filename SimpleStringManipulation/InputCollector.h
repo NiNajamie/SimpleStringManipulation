@@ -10,6 +10,7 @@
 
 @interface InputCollector : NSObject
 
+// method will take in a single string parameter promptString, and return whatever text the user inputs after that prompt.
 -(NSString *)inputForPrompt:(NSString *)promptString;
 
 
